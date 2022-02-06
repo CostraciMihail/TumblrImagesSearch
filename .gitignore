@@ -1,0 +1,7 @@
+### Xcode ###
+
+## User settings
+xcuserdata/
+
+### Xcode Patch ###
+!*.xcodeproj/xcshareddata/
