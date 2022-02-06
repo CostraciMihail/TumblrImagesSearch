@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  TumblrImagesSearch
+
+  Created by Mihail COSTRACI on 07.02.2022.
+  Copyright © 2022 iOS Developer. All rights reserved.
+*/
+
+// MARK: - Errors
+//
+"ERROR.UNKNOWN_ERROR" = "Fail, please try again later";
+"ERROR.NO_INTERNET_CONNECTION" = "Internet Connection was Lost. Please try again later.";
+"ERROR.REQUEST_TIMED_OUT" = "Request timed out";
