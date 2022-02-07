@@ -33,21 +33,21 @@ struct TSIAPIClient: TSIErrorReponse {
         .eraseToAnyPublisher()
     }
 
-    func downloadImage(_ request: URLRequest) -> AnyPublisher<APIClientResponse<Data>, TSIError> {
+    func downloadImage(_ request: URLRequest) -> AnyPublisher<UIImage, TSIError> {
 
         return URLSession.shared
             .dataTaskPublisher(for: request)
-            .tryMap { result -> APIClientResponse<Data> in
-
-                guard result.data.count > 0 else {
+            .tryMap { data, response in
+                guard let image = UIImage(data: data) else {
                     throw TSIError(code: TSIErrorKeys.UNKNOWN_ERROR.rawValue)
                 }
-
-                return APIClientResponse(value: result.data, response: result.response)
-            }.mapError({ error -> TSIError in
-
-            return TSIError.toError(error: error)
-        })
-        .eraseToAnyPublisher()
+                return image
+            }
+            .mapError({ error -> TSIError in
+                return TSIError.toError(error: error)
+            })
+            .eraseToAnyPublisher()
     }
+
+
 }

@@ -12,6 +12,8 @@ import UIKit
 
 protocol TSITumblrAPIServiceInterface {
     func searchImages(withTag tag: String) -> AnyPublisher<TSISearchResultsResponse, TSIError>
+    func downloadImage(fromUrl url: String) -> AnyPublisher<UIImage, TSIError>
+    func downloaImageTemp(from url: String) -> AnyPublisher<UIImage, TSIError>
 }
 
 class TSITumblrAPIService: TSITumblrAPIServiceInterface {
@@ -26,15 +28,29 @@ class TSITumblrAPIService: TSITumblrAPIServiceInterface {
             .eraseToAnyPublisher()
     }
 
-    func downloadImage(fromUrl url: String) -> AnyPublisher<UIImage?, TSIError> {
+    func downloadImage(fromUrl url: String) -> AnyPublisher<UIImage, TSIError> {
         let router = ExpContentActionsEndpoint.downloadImage(fromUrl: url)
         let request = URLRequest(service: router)
         return client.downloadImage(request)
-            .map({ response in
-                UIImage(data: response.value)
+            .map({ image in
+                image
             })
             .eraseToAnyPublisher()
+    }
 
+    func downloaImageTemp(from url: String) -> AnyPublisher<UIImage, TSIError> {
+        let url = URL(string: url)!
+        let reqeust = URLRequest(url: url)
+        
+        return URLSession.shared
+            .dataTaskPublisher(for: reqeust)
+            .tryMap { data, response in
+                UIImage(data: data)!
+            }
+            .mapError({ error -> TSIError in
+                return TSIError.toError(error: error)
+            })
+            .eraseToAnyPublisher()
     }
 }
 

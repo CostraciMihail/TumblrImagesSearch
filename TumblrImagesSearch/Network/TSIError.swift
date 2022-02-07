@@ -75,23 +75,11 @@ struct TSIError: Error {
 
 enum TSIErrorKeys: Int, CaseIterable {
 
-    // Calendar Errors
-    case CALENDAR_ACCESS_DENIED_OR_RESTRICTED
-    case EVENT_NOT_ADDED_TO_CALENDAR
-    case EVENT_ALREADY_EXISTS_IN_CALENDAR
-    case EVENT_EDIT_WAS_CANCELED_IN_CALENDAR
-    case EVENT_EDIT_WAS_DELETED_IN_CALENDAR
-
-    // Other Errors
     case URL_ERROR
     case UNKNOWN_ERROR
-    case EDITOR_ROLE_RESTRICTION
     case NO_INTERNET_CONNECTION = -1009
     case REQUEST_TIMED_OUT = -1001
     case NO_VALUE_OR_BODY_IS_EMPTY = 3840
-    case UNABLE_TO_DOWNLOAD_OVER_WIFI = -3
-    case FILE_ALREADY_EXISTS = 516
-
 
     /// The response class representation of status codes, these get grouped by their first digit.
     enum ResponseType {

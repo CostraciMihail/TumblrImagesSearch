@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		769206AA27B3082900274562 /* TISImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769206A927B3082900274562 /* TISImageCell.swift */; };
+		769206AC27B3084800274562 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769206AB27B3084800274562 /* Extensions.swift */; };
+		769206AE27B359D600274562 /* TISSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769206AD27B359D600274562 /* TISSectionHeaderView.swift */; };
 		76DDC49E27B08782009E1A6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC49D27B08782009E1A6D /* AppDelegate.swift */; };
 		76DDC4A027B08782009E1A6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC49F27B08782009E1A6D /* SceneDelegate.swift */; };
 		76DDC4A227B08782009E1A6D /* TISImagesSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC4A127B08782009E1A6D /* TISImagesSearchViewController.swift */; };
-		76DDC4A527B08782009E1A6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76DDC4A327B08782009E1A6D /* Main.storyboard */; };
 		76DDC4A727B08785009E1A6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76DDC4A627B08785009E1A6D /* Assets.xcassets */; };
 		76DDC4AA27B08785009E1A6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76DDC4A827B08785009E1A6D /* LaunchScreen.storyboard */; };
 		76DDC4B527B08785009E1A6D /* TumblrImagesSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC4B427B08785009E1A6D /* TumblrImagesSearchTests.swift */; };
@@ -27,6 +29,7 @@
 		76DDC4F127B0C164009E1A6D /* TSIAppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC4F027B0C164009E1A6D /* TSIAppContext.swift */; };
 		76DDC4F427B0C6F4009E1A6D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76DDC4F627B0C6F4009E1A6D /* Localizable.strings */; };
 		76DDC4F827B0C757009E1A6D /* TSIHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC4F727B0C757009E1A6D /* TSIHelpers.swift */; };
+		76DDC4FA27B0E9BC009E1A6D /* TISImagesSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC4F927B0E9BB009E1A6D /* TISImagesSearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,11 +50,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		769206A927B3082900274562 /* TISImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TISImageCell.swift; sourceTree = "<group>"; };
+		769206AB27B3084800274562 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		769206AD27B359D600274562 /* TISSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TISSectionHeaderView.swift; sourceTree = "<group>"; };
 		76DDC49A27B08782009E1A6D /* TumblrImagesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TumblrImagesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76DDC49D27B08782009E1A6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76DDC49F27B08782009E1A6D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		76DDC4A127B08782009E1A6D /* TISImagesSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TISImagesSearchViewController.swift; sourceTree = "<group>"; };
-		76DDC4A427B08782009E1A6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		76DDC4A627B08785009E1A6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76DDC4A927B08785009E1A6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76DDC4AB27B08785009E1A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,6 +76,7 @@
 		76DDC4F027B0C164009E1A6D /* TSIAppContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSIAppContext.swift; sourceTree = "<group>"; };
 		76DDC4F527B0C6F4009E1A6D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		76DDC4F727B0C757009E1A6D /* TSIHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSIHelpers.swift; sourceTree = "<group>"; };
+		76DDC4F927B0E9BB009E1A6D /* TISImagesSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TISImagesSearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,18 +127,16 @@
 		76DDC49C27B08782009E1A6D /* TumblrImagesSearch */ = {
 			isa = PBXGroup;
 			children = (
-				76DDC4F027B0C164009E1A6D /* TSIAppContext.swift */,
-				76DDC4F727B0C757009E1A6D /* TSIHelpers.swift */,
-				76DDC4E027B0BE5B009E1A6D /* Network */,
 				76DDC49D27B08782009E1A6D /* AppDelegate.swift */,
 				76DDC49F27B08782009E1A6D /* SceneDelegate.swift */,
-				76DDC4A127B08782009E1A6D /* TISImagesSearchViewController.swift */,
-				76DDC4CD27B096EE009E1A6D /* TISImageDetailsViewController.swift */,
-				76DDC4A327B08782009E1A6D /* Main.storyboard */,
-				76DDC4A627B08785009E1A6D /* Assets.xcassets */,
+				769206AB27B3084800274562 /* Extensions.swift */,
+				76DDC4E027B0BE5B009E1A6D /* Network */,
+				76DDC4FB27B0F377009E1A6D /* ViewControllers */,
+				76DDC4FE27B0F3ED009E1A6D /* Helpers */,
 				76DDC4A827B08785009E1A6D /* LaunchScreen.storyboard */,
-				76DDC4AB27B08785009E1A6D /* Info.plist */,
 				76DDC4F627B0C6F4009E1A6D /* Localizable.strings */,
+				76DDC4AB27B08785009E1A6D /* Info.plist */,
+				76DDC4A627B08785009E1A6D /* Assets.xcassets */,
 			);
 			path = TumblrImagesSearch;
 			sourceTree = "<group>";
@@ -166,6 +170,43 @@
 				76DDC4EA27B0BFDD009E1A6D /* TISEndpointProtocol.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		76DDC4FB27B0F377009E1A6D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				76DDC4FC27B0F38B009E1A6D /* ImagesSearch */,
+				76DDC4FD27B0F3A3009E1A6D /* ImageDetails */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		76DDC4FC27B0F38B009E1A6D /* ImagesSearch */ = {
+			isa = PBXGroup;
+			children = (
+				76DDC4A127B08782009E1A6D /* TISImagesSearchViewController.swift */,
+				769206AD27B359D600274562 /* TISSectionHeaderView.swift */,
+				76DDC4F927B0E9BB009E1A6D /* TISImagesSearchViewModel.swift */,
+				769206A927B3082900274562 /* TISImageCell.swift */,
+			);
+			path = ImagesSearch;
+			sourceTree = "<group>";
+		};
+		76DDC4FD27B0F3A3009E1A6D /* ImageDetails */ = {
+			isa = PBXGroup;
+			children = (
+				76DDC4CD27B096EE009E1A6D /* TISImageDetailsViewController.swift */,
+			);
+			path = ImageDetails;
+			sourceTree = "<group>";
+		};
+		76DDC4FE27B0F3ED009E1A6D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				76DDC4F027B0C164009E1A6D /* TSIAppContext.swift */,
+				76DDC4F727B0C757009E1A6D /* TSIHelpers.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,7 +318,6 @@
 				76DDC4AA27B08785009E1A6D /* LaunchScreen.storyboard in Resources */,
 				76DDC4F427B0C6F4009E1A6D /* Localizable.strings in Resources */,
 				76DDC4A727B08785009E1A6D /* Assets.xcassets in Resources */,
-				76DDC4A527B08782009E1A6D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +343,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				76DDC4ED27B0C05A009E1A6D /* TISConfig.swift in Sources */,
+				769206AA27B3082900274562 /* TISImageCell.swift in Sources */,
+				76DDC4FA27B0E9BC009E1A6D /* TISImagesSearchViewModel.swift in Sources */,
 				76DDC4A227B08782009E1A6D /* TISImagesSearchViewController.swift in Sources */,
 				76DDC49E27B08782009E1A6D /* AppDelegate.swift in Sources */,
 				76DDC4E727B0BEF9009E1A6D /* TISImagesSearchApiService.swift in Sources */,
@@ -310,7 +352,9 @@
 				76DDC4EF27B0C0AF009E1A6D /* TSIError.swift in Sources */,
 				76DDC4CE27B096EE009E1A6D /* TISImageDetailsViewController.swift in Sources */,
 				76DDC4EB27B0BFDD009E1A6D /* TISEndpointProtocol.swift in Sources */,
+				769206AE27B359D600274562 /* TISSectionHeaderView.swift in Sources */,
 				76DDC4E427B0BE9D009E1A6D /* TSIAPIClient.swift in Sources */,
+				769206AC27B3084800274562 /* Extensions.swift in Sources */,
 				76DDC4F127B0C164009E1A6D /* TSIAppContext.swift in Sources */,
 				76DDC4E927B0BF56009E1A6D /* TISImagesSearchEndpoint.swift in Sources */,
 				76DDC4A027B08782009E1A6D /* SceneDelegate.swift in Sources */,
@@ -351,14 +395,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		76DDC4A327B08782009E1A6D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				76DDC4A427B08782009E1A6D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		76DDC4A827B08785009E1A6D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -429,7 +465,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -484,7 +520,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -506,9 +542,9 @@
 				INFOPLIST_FILE = TumblrImagesSearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -534,9 +570,9 @@
 				INFOPLIST_FILE = TumblrImagesSearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

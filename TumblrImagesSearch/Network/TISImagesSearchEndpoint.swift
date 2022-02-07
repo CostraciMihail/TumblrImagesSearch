@@ -8,10 +8,6 @@
 
 import Foundation
 
-enum ExpContentActions {
-    case searchImages(tag: String)
-}
-
 enum ExpContentActionsEndpoint: EndpointProtocol {
 
     case searchImages(tag: String)

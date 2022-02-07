@@ -92,6 +92,7 @@ extension URLRequest {
         service.headers?.forEach({ addValue($1, forHTTPHeaderField: $0 )})
         self.httpMethod = service.httpMethod.rawValue
 
+
         guard case .requestParameters(let bodyParams, _) = service.task, let parameters = bodyParams else { return }
 
         httpBody = try? JSONSerialization.data(withJSONObject: parameters)
