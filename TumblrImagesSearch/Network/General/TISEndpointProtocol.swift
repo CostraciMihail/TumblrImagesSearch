@@ -28,6 +28,7 @@ public enum HTTPTask {
 }
 
 enum ParameterEncoding {
+    
     case url
     case json
     case date

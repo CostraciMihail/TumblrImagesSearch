@@ -30,8 +30,7 @@ extension TSIErrorReponse {
         let successStatusRange = Range(uncheckedBounds: (lower: 200, upper: 300))
         
         if successStatusRange.contains(response.statusCode) {
-            
-            // Check if HTTPS 'Body' is nil
+            // Check if response 'Body' is not nil
             guard result.data.count > 0 else {
                 return APIClientResponse(value: true as! T, response: result.response)
             }
@@ -49,7 +48,6 @@ extension TSIErrorReponse {
             }
             
             if let _ = jsonDict {
-                
                 do {
                     let value = try decoder.decode(T.self, from: result.data)
                     return APIClientResponse(value: value, response: result.response)
@@ -69,7 +67,6 @@ extension TSIErrorReponse {
             }
             
         } else {
-            
             let jsonObject = try JSONSerialization.jsonObject(with: result.data, options: .mutableLeaves)
             if let jsonDict = jsonObject as? [String: Any] {
                 
@@ -105,7 +102,6 @@ extension TSIErrorReponse {
     func debugRequest(_ request: URLRequest) {
         
         #if DEBUG
-        
         let httpMethod = request.httpMethod ?? ""
         let urlString = request.url?.absoluteString ?? ""
         let header = request.allHTTPHeaderFields ?? [String: String]()
@@ -130,7 +126,6 @@ extension TSIErrorReponse {
     func debugResponse(_ result: (data: Data, response: URLResponse), decoder: JSONDecoder) {
         
         #if DEBUG
-        
         guard let response = result.response as? HTTPURLResponse else {
             return
         }

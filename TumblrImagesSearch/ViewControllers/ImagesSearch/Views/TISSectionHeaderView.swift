@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+/// TISSectionHeaderView
 class TISSectionHeaderView: UITableViewHeaderFooterView {
 
     var title = UILabel(frame: .zero)

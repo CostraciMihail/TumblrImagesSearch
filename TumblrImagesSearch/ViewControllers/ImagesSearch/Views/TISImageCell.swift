@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+/// TISImageCell
 class TISImageCell: UITableViewCell {
 
     enum LayoutConstant {

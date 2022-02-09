@@ -9,7 +9,7 @@
 import Foundation
 import Combine
 
-enum ImageSection: Int, CaseIterable, Hashable {
+enum ImageSection: Int, Hashable {
     case main
 }
 
@@ -26,6 +26,7 @@ protocol TISImagesSearchViewModelInterface: AnyObject {
 }
 
 class TISImagesSearchViewModel {
+    
     @Published var foundImages = [TSISearchResultModel]()
     var service: TSITumblrAPIServiceInterface
     private var cancelBag = Set<AnyCancellable>()
@@ -67,5 +68,4 @@ class TISImagesSearchViewModel {
     func removeFoundedImages() {
         foundImages.removeAll()
     }
-
 }

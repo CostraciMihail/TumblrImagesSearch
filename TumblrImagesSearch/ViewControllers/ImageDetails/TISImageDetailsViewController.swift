@@ -9,38 +9,53 @@
 import UIKit
 import Combine
 
+/// TISImageDetailsViewController
 class TISImageDetailsViewController: UIViewController {
+    // MARK: - Properties
 
     private let imageView: UIImageView = {
-        $0.contentMode = .scaleAspectFill
+        $0.contentMode = .scaleAspectFit
         $0.clipsToBounds = true
         return $0
     }(UIImageView())
 
-    let service = TSITumblrAPIService()
+    private let viewModel: TISImageDetailsViewModelInterface
     private var cancelBag = Set<AnyCancellable>()
+
+    // MARK: - Initialization
+
+    init(viewModle: TISImageDetailsViewModelInterface) {
+        self.viewModel = viewModle
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    // MARK: - View Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setupUI()
-        loadImage()
+        bind()
+    }
 
+    // MARK: - UI Setup
+
+    func setupUI() {
+        title = viewModel.item.tags?.first ?? "Image Tag"
+        view.backgroundColor = .white
+        setupNavigationBar()
+        setupImageView()
+    }
+
+    func setupNavigationBar() {
         navigationController?.navigationBar.backgroundColor = .white
         navigationController?.navigationBar.isTranslucent = true
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-    }
-
-    func setupUI() {
-        // View
-        title = "Image Name"
-        view.backgroundColor = .white
-
-        // Image view
+    func setupImageView() {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(imageView)
 
@@ -52,15 +67,18 @@ class TISImageDetailsViewController: UIViewController {
         ])
     }
 
-    func loadImage() {
-        service.downloaImageTemp(from: "https://cdn.cocoacasts.com/cc00ceb0c6bff0d536f25454d50223875d5c79f1/above-the-clouds.jpg")
-            .sink(receiveCompletion: { _ in }) { image in
+    // MARK: - Binding
 
-                DispatchQueue.main.async {
-                    self.imageView.image = image
-                }
+    func bind() {
+        viewModel
+            .loadImage()
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: {_ in}) { [weak self] image in
+                self?.imageView.image = image
             }.store(in: &cancelBag)
     }
+
+    // MARK: - Deinitialization
 
     deinit {
         cancelBag.removeAll()

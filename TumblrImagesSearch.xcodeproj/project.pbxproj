@@ -10,6 +10,7 @@
 		769206AA27B3082900274562 /* TISImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769206A927B3082900274562 /* TISImageCell.swift */; };
 		769206AC27B3084800274562 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769206AB27B3084800274562 /* Extensions.swift */; };
 		769206AE27B359D600274562 /* TISSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769206AD27B359D600274562 /* TISSectionHeaderView.swift */; };
+		769206B027B35A9A00274562 /* TISImageDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769206AF27B35A9A00274562 /* TISImageDetailsViewModel.swift */; };
 		76DDC49E27B08782009E1A6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC49D27B08782009E1A6D /* AppDelegate.swift */; };
 		76DDC4A027B08782009E1A6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC49F27B08782009E1A6D /* SceneDelegate.swift */; };
 		76DDC4A227B08782009E1A6D /* TISImagesSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC4A127B08782009E1A6D /* TISImagesSearchViewController.swift */; };
@@ -53,6 +54,7 @@
 		769206A927B3082900274562 /* TISImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TISImageCell.swift; sourceTree = "<group>"; };
 		769206AB27B3084800274562 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		769206AD27B359D600274562 /* TISSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TISSectionHeaderView.swift; sourceTree = "<group>"; };
+		769206AF27B35A9A00274562 /* TISImageDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TISImageDetailsViewModel.swift; sourceTree = "<group>"; };
 		76DDC49A27B08782009E1A6D /* TumblrImagesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TumblrImagesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76DDC49D27B08782009E1A6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76DDC49F27B08782009E1A6D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		769206B127B361A100274562 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				769206AD27B359D600274562 /* TISSectionHeaderView.swift */,
+				769206A927B3082900274562 /* TISImageCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		769206B227B361FB00274562 /* ImagesSearchApi */ = {
+			isa = PBXGroup;
+			children = (
+				76DDC4E627B0BEF9009E1A6D /* TISImagesSearchApiService.swift */,
+				76DDC4E827B0BF56009E1A6D /* TISImagesSearchEndpoint.swift */,
+			);
+			path = ImagesSearchApi;
+			sourceTree = "<group>";
+		};
+		769206B327B3620A00274562 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				76DDC4EC27B0C05A009E1A6D /* TISConfig.swift */,
+				76DDC4EA27B0BFDD009E1A6D /* TISEndpointProtocol.swift */,
+				76DDC4E227B0BE9D009E1A6D /* TSIAPIClient.swift */,
+				76DDC4EE27B0C0AF009E1A6D /* TSIError.swift */,
+				76DDC4E327B0BE9D009E1A6D /* TSIErrorReponse.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
 		76DDC49127B08782009E1A6D = {
 			isa = PBXGroup;
 			children = (
@@ -129,7 +161,6 @@
 			children = (
 				76DDC49D27B08782009E1A6D /* AppDelegate.swift */,
 				76DDC49F27B08782009E1A6D /* SceneDelegate.swift */,
-				769206AB27B3084800274562 /* Extensions.swift */,
 				76DDC4E027B0BE5B009E1A6D /* Network */,
 				76DDC4FB27B0F377009E1A6D /* ViewControllers */,
 				76DDC4FE27B0F3ED009E1A6D /* Helpers */,
@@ -161,13 +192,8 @@
 		76DDC4E027B0BE5B009E1A6D /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				76DDC4E227B0BE9D009E1A6D /* TSIAPIClient.swift */,
-				76DDC4E327B0BE9D009E1A6D /* TSIErrorReponse.swift */,
-				76DDC4EE27B0C0AF009E1A6D /* TSIError.swift */,
-				76DDC4E627B0BEF9009E1A6D /* TISImagesSearchApiService.swift */,
-				76DDC4E827B0BF56009E1A6D /* TISImagesSearchEndpoint.swift */,
-				76DDC4EC27B0C05A009E1A6D /* TISConfig.swift */,
-				76DDC4EA27B0BFDD009E1A6D /* TISEndpointProtocol.swift */,
+				769206B327B3620A00274562 /* General */,
+				769206B227B361FB00274562 /* ImagesSearchApi */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -185,9 +211,8 @@
 			isa = PBXGroup;
 			children = (
 				76DDC4A127B08782009E1A6D /* TISImagesSearchViewController.swift */,
-				769206AD27B359D600274562 /* TISSectionHeaderView.swift */,
 				76DDC4F927B0E9BB009E1A6D /* TISImagesSearchViewModel.swift */,
-				769206A927B3082900274562 /* TISImageCell.swift */,
+				769206B127B361A100274562 /* Views */,
 			);
 			path = ImagesSearch;
 			sourceTree = "<group>";
@@ -196,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				76DDC4CD27B096EE009E1A6D /* TISImageDetailsViewController.swift */,
+				769206AF27B35A9A00274562 /* TISImageDetailsViewModel.swift */,
 			);
 			path = ImageDetails;
 			sourceTree = "<group>";
@@ -203,6 +229,7 @@
 		76DDC4FE27B0F3ED009E1A6D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				769206AB27B3084800274562 /* Extensions.swift */,
 				76DDC4F027B0C164009E1A6D /* TSIAppContext.swift */,
 				76DDC4F727B0C757009E1A6D /* TSIHelpers.swift */,
 			);
@@ -356,6 +383,7 @@
 				76DDC4E427B0BE9D009E1A6D /* TSIAPIClient.swift in Sources */,
 				769206AC27B3084800274562 /* Extensions.swift in Sources */,
 				76DDC4F127B0C164009E1A6D /* TSIAppContext.swift in Sources */,
+				769206B027B35A9A00274562 /* TISImageDetailsViewModel.swift in Sources */,
 				76DDC4E927B0BF56009E1A6D /* TISImagesSearchEndpoint.swift in Sources */,
 				76DDC4A027B08782009E1A6D /* SceneDelegate.swift in Sources */,
 				76DDC4E527B0BE9D009E1A6D /* TSIErrorReponse.swift in Sources */,

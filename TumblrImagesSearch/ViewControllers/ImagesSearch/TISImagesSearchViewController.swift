@@ -8,14 +8,18 @@
 import UIKit
 import Combine
 
+/// TISImageDetailsViewController
 class TISImagesSearchViewController: UIViewController {
 
     typealias DataSource = UITableViewDiffableDataSource<ImageSection, ImageItem>
     typealias Snapshot = NSDiffableDataSourceSnapshot<ImageSection, ImageItem>
 
+    /// LayoutConstant
     enum LayoutConstant {
         static let tableHeaderHeight: CGFloat = 30
     }
+
+    // MARK: - Properties
 
     private var searchBar: UISearchBar = {
         $0.frame = .zero
@@ -98,8 +102,6 @@ class TISImagesSearchViewController: UIViewController {
             .dropFirst()
             .sink { [weak self] completion in
                 if case .failure(let error) = completion {
-                    debugPrint("Error: \(error)")
-
                     guard let self = self else { return }
                     showMessage("Error", message: error.localizedDescription, from: self)
                 }
@@ -169,7 +171,8 @@ extension TISImagesSearchViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        openImageDetailsScreen()
+        guard indexPath.row <= viewModel.foundImages.count - 1 else { return }
+        openImageDetailsScreen(item: viewModel.foundImages[indexPath.row])
     }
 
     func setUpCell(tableView: UITableView, indexPath: IndexPath, item: ImageItem) -> UITableViewCell {
@@ -208,9 +211,11 @@ extension TISImagesSearchViewController: UITableViewDelegate {
 // MARK: - Navigation
 
 extension TISImagesSearchViewController {
-    func openImageDetailsScreen() {
+    func openImageDetailsScreen(item: TSISearchResultModel) {
         guard let navVC = navigationController else { return }
-        let vc = TISImageDetailsViewController()
+
+        let viewModel = TISImageDetailsViewModel(service: TSITumblrAPIService(), item: item)
+        let vc = TISImageDetailsViewController(viewModle: viewModel)
 
         DispatchQueue.main.async {
             navVC.pushViewController(vc, animated: true)
