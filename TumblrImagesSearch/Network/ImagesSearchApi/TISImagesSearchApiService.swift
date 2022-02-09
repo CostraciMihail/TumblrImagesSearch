@@ -12,33 +12,26 @@ import UIKit
 
 protocol TSITumblrAPIServiceInterface {
     func searchImages(withTag tag: String) -> AnyPublisher<TSISearchResultsResponse, TSIError>
-    func downloadImage(fromUrl url: String) -> AnyPublisher<UIImage, TSIError>
-    func downloaImageTemp(from url: String) -> AnyPublisher<UIImage, TSIError>
+    func downloaImage(from url: String) -> AnyPublisher<UIImage, TSIError>
 }
 
 class TSITumblrAPIService: TSITumblrAPIServiceInterface {
 
-    private let client = TSIAPIClient()
+    var client: TSIAPIClientInterface
+
+    init(client: TSIAPIClientInterface = TSIAPIClient()) {
+      self.client = client
+    }
 
     func searchImages(withTag tag: String) -> AnyPublisher<TSISearchResultsResponse, TSIError> {
-        let router = ExpContentActionsEndpoint.searchImages(tag: tag)
+        let router = TSIContentActionsEndpoint.searchImages(tag: tag)
         let request = URLRequest(service: router)
-        return client.run(request)
+        return client.run(request, JSONDecoder())
             .map(\.value)
             .eraseToAnyPublisher()
     }
 
-    func downloadImage(fromUrl url: String) -> AnyPublisher<UIImage, TSIError> {
-        let router = ExpContentActionsEndpoint.downloadImage(fromUrl: url)
-        let request = URLRequest(service: router)
-        return client.downloadImage(request)
-            .map({ image in
-                image
-            })
-            .eraseToAnyPublisher()
-    }
-
-    func downloaImageTemp(from url: String) -> AnyPublisher<UIImage, TSIError> {
+    func downloaImage(from url: String) -> AnyPublisher<UIImage, TSIError> {
         let url = URL(string: url)!
         let reqeust = URLRequest(url: url)
         

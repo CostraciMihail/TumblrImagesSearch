@@ -14,7 +14,11 @@ struct APIClientResponse<T> {
     let response: URLResponse
 }
 
-struct TSIAPIClient: TSIErrorReponse {
+protocol TSIAPIClientInterface {
+  func run<T: Decodable>(_ request: URLRequest, _ decoder: JSONDecoder) -> AnyPublisher<APIClientResponse<T>, TSIError>
+}
+
+struct TSIAPIClient: TSIAPIClientInterface, TSIErrorReponse {
     
     func run<T: Decodable>(_ request: URLRequest, _ decoder: JSONDecoder = JSONDecoder()) -> AnyPublisher<APIClientResponse<T>, TSIError> {
         

@@ -47,10 +47,11 @@ protocol EndpointProtocol {
 extension EndpointProtocol {
 
     var baseURL: URL {
-        guard let url = URL(string: Config.baseURL) else {
-            fatalError("\(String(describing: self)): Wrong baseURL \(Config.baseURL)")
-        }
-        return url
+      URL(string: Config.baseURL)!
+    }
+
+    var fullURL: URL {
+      URL(string: baseURL.absoluteString + self.path)!
     }
 
     var headers: HTTPHeaders? {

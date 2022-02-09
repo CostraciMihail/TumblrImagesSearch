@@ -77,6 +77,8 @@ enum TSIErrorKeys: Int, CaseIterable {
 
     case URL_ERROR
     case UNKNOWN_ERROR
+    case MOCK_RESPONSE_IS_NOT_SETTED
+    case FAIL_LOADING_LOCAL_JSON_FILE
     case NO_INTERNET_CONNECTION = -1009
     case REQUEST_TIMED_OUT = -1001
     case NO_VALUE_OR_BODY_IS_EMPTY = 3840

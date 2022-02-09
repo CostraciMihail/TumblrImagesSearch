@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum ExpContentActionsEndpoint: EndpointProtocol {
+enum TSIContentActionsEndpoint: EndpointProtocol {
 
     case searchImages(tag: String)
     case downloadImage(fromUrl: String)

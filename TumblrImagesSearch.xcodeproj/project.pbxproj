@@ -11,12 +11,33 @@
 		769206AC27B3084800274562 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769206AB27B3084800274562 /* Extensions.swift */; };
 		769206AE27B359D600274562 /* TISSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769206AD27B359D600274562 /* TISSectionHeaderView.swift */; };
 		769206B027B35A9A00274562 /* TISImageDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769206AF27B35A9A00274562 /* TISImageDetailsViewModel.swift */; };
+		76CA2D0327B3AC8C0025DE77 /* SXHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA2CFE27B3AC8C0025DE77 /* SXHelpers.swift */; };
+		76CA2D0427B3AC8C0025DE77 /* TSIURLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA2D0027B3AC8C0025DE77 /* TSIURLSessionMock.swift */; };
+		76CA2D0527B3AC8C0025DE77 /* SXAPIClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA2D0127B3AC8C0025DE77 /* SXAPIClientMock.swift */; };
+		76CA2D0627B3AC8C0025DE77 /* HTTPURLResponseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA2D0227B3AC8C0025DE77 /* HTTPURLResponseMock.swift */; };
+		76CA2D0727B3AD830025DE77 /* TSIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC4EE27B0C0AF009E1A6D /* TSIError.swift */; };
+		76CA2D0827B3AD890025DE77 /* TISEndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC4EA27B0BFDD009E1A6D /* TISEndpointProtocol.swift */; };
+		76CA2D0927B3AD890025DE77 /* TSIAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC4E227B0BE9D009E1A6D /* TSIAPIClient.swift */; };
+		76CA2D0A27B3AD890025DE77 /* TISConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC4EC27B0C05A009E1A6D /* TISConfig.swift */; };
+		76CA2D0B27B3AD890025DE77 /* TSIErrorReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC4E327B0BE9D009E1A6D /* TSIErrorReponse.swift */; };
+		76CA2D0C27B3AD910025DE77 /* TISImagesSearchApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC4E627B0BEF9009E1A6D /* TISImagesSearchApiService.swift */; };
+		76CA2D0D27B3AD910025DE77 /* TISImagesSearchEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC4E827B0BF56009E1A6D /* TISImagesSearchEndpoint.swift */; };
+		76CA2D0E27B3AD950025DE77 /* TISImagesSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC4F927B0E9BB009E1A6D /* TISImagesSearchViewModel.swift */; };
+		76CA2D0F27B3AD950025DE77 /* TISImagesSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC4A127B08782009E1A6D /* TISImagesSearchViewController.swift */; };
+		76CA2D1027B3AD990025DE77 /* TISImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769206A927B3082900274562 /* TISImageCell.swift */; };
+		76CA2D1127B3AD990025DE77 /* TISSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769206AD27B359D600274562 /* TISSectionHeaderView.swift */; };
+		76CA2D1227B3AD9C0025DE77 /* TISImageDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769206AF27B35A9A00274562 /* TISImageDetailsViewModel.swift */; };
+		76CA2D1327B3AD9C0025DE77 /* TISImageDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC4CD27B096EE009E1A6D /* TISImageDetailsViewController.swift */; };
+		76CA2D1427B3ADA20025DE77 /* TSIAppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC4F027B0C164009E1A6D /* TSIAppContext.swift */; };
+		76CA2D1527B3ADA20025DE77 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769206AB27B3084800274562 /* Extensions.swift */; };
+		76CA2D1627B3ADA20025DE77 /* TSIHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC4F727B0C757009E1A6D /* TSIHelpers.swift */; };
+		76CA2D1827B3B1C30025DE77 /* Cars-Images.json in Resources */ = {isa = PBXBuildFile; fileRef = 76CA2D1727B3B1C30025DE77 /* Cars-Images.json */; };
 		76DDC49E27B08782009E1A6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC49D27B08782009E1A6D /* AppDelegate.swift */; };
 		76DDC4A027B08782009E1A6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC49F27B08782009E1A6D /* SceneDelegate.swift */; };
 		76DDC4A227B08782009E1A6D /* TISImagesSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC4A127B08782009E1A6D /* TISImagesSearchViewController.swift */; };
 		76DDC4A727B08785009E1A6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76DDC4A627B08785009E1A6D /* Assets.xcassets */; };
 		76DDC4AA27B08785009E1A6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76DDC4A827B08785009E1A6D /* LaunchScreen.storyboard */; };
-		76DDC4B527B08785009E1A6D /* TumblrImagesSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC4B427B08785009E1A6D /* TumblrImagesSearchTests.swift */; };
+		76DDC4B527B08785009E1A6D /* TISImagesSearchApiServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC4B427B08785009E1A6D /* TISImagesSearchApiServiceTests.swift */; };
 		76DDC4BF27B08785009E1A6D /* TumblrImagesSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC4BE27B08785009E1A6D /* TumblrImagesSearchUITests.swift */; };
 		76DDC4C127B08785009E1A6D /* TumblrImagesSearchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC4C027B08785009E1A6D /* TumblrImagesSearchUITestsLaunchTests.swift */; };
 		76DDC4CE27B096EE009E1A6D /* TISImageDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC4CD27B096EE009E1A6D /* TISImageDetailsViewController.swift */; };
@@ -55,6 +76,11 @@
 		769206AB27B3084800274562 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		769206AD27B359D600274562 /* TISSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TISSectionHeaderView.swift; sourceTree = "<group>"; };
 		769206AF27B35A9A00274562 /* TISImageDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TISImageDetailsViewModel.swift; sourceTree = "<group>"; };
+		76CA2CFE27B3AC8C0025DE77 /* SXHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SXHelpers.swift; sourceTree = "<group>"; };
+		76CA2D0027B3AC8C0025DE77 /* TSIURLSessionMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSIURLSessionMock.swift; sourceTree = "<group>"; };
+		76CA2D0127B3AC8C0025DE77 /* SXAPIClientMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SXAPIClientMock.swift; sourceTree = "<group>"; };
+		76CA2D0227B3AC8C0025DE77 /* HTTPURLResponseMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPURLResponseMock.swift; sourceTree = "<group>"; };
+		76CA2D1727B3B1C30025DE77 /* Cars-Images.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Cars-Images.json"; sourceTree = "<group>"; };
 		76DDC49A27B08782009E1A6D /* TumblrImagesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TumblrImagesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76DDC49D27B08782009E1A6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76DDC49F27B08782009E1A6D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,7 +89,7 @@
 		76DDC4A927B08785009E1A6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76DDC4AB27B08785009E1A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76DDC4B027B08785009E1A6D /* TumblrImagesSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TumblrImagesSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		76DDC4B427B08785009E1A6D /* TumblrImagesSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TumblrImagesSearchTests.swift; sourceTree = "<group>"; };
+		76DDC4B427B08785009E1A6D /* TISImagesSearchApiServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TISImagesSearchApiServiceTests.swift; sourceTree = "<group>"; };
 		76DDC4BA27B08785009E1A6D /* TumblrImagesSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TumblrImagesSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		76DDC4BE27B08785009E1A6D /* TumblrImagesSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TumblrImagesSearchUITests.swift; sourceTree = "<group>"; };
 		76DDC4C027B08785009E1A6D /* TumblrImagesSearchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TumblrImagesSearchUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -136,6 +162,24 @@
 			path = General;
 			sourceTree = "<group>";
 		};
+		76CA2CFD27B3AC8B0025DE77 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				76CA2CFE27B3AC8C0025DE77 /* SXHelpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		76CA2CFF27B3AC8C0025DE77 /* APIClientMocks */ = {
+			isa = PBXGroup;
+			children = (
+				76CA2D0027B3AC8C0025DE77 /* TSIURLSessionMock.swift */,
+				76CA2D0127B3AC8C0025DE77 /* SXAPIClientMock.swift */,
+				76CA2D0227B3AC8C0025DE77 /* HTTPURLResponseMock.swift */,
+			);
+			path = APIClientMocks;
+			sourceTree = "<group>";
+		};
 		76DDC49127B08782009E1A6D = {
 			isa = PBXGroup;
 			children = (
@@ -175,7 +219,10 @@
 		76DDC4B327B08785009E1A6D /* TumblrImagesSearchTests */ = {
 			isa = PBXGroup;
 			children = (
-				76DDC4B427B08785009E1A6D /* TumblrImagesSearchTests.swift */,
+				76CA2CFF27B3AC8C0025DE77 /* APIClientMocks */,
+				76CA2CFD27B3AC8B0025DE77 /* Helpers */,
+				76DDC4B427B08785009E1A6D /* TISImagesSearchApiServiceTests.swift */,
+				76CA2D1727B3B1C30025DE77 /* Cars-Images.json */,
 			);
 			path = TumblrImagesSearchTests;
 			sourceTree = "<group>";
@@ -352,6 +399,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76CA2D1827B3B1C30025DE77 /* Cars-Images.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,7 +442,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76DDC4B527B08785009E1A6D /* TumblrImagesSearchTests.swift in Sources */,
+				76CA2D1627B3ADA20025DE77 /* TSIHelpers.swift in Sources */,
+				76CA2D0B27B3AD890025DE77 /* TSIErrorReponse.swift in Sources */,
+				76CA2D1027B3AD990025DE77 /* TISImageCell.swift in Sources */,
+				76CA2D0827B3AD890025DE77 /* TISEndpointProtocol.swift in Sources */,
+				76CA2D0E27B3AD950025DE77 /* TISImagesSearchViewModel.swift in Sources */,
+				76CA2D0A27B3AD890025DE77 /* TISConfig.swift in Sources */,
+				76CA2D0327B3AC8C0025DE77 /* SXHelpers.swift in Sources */,
+				76CA2D0727B3AD830025DE77 /* TSIError.swift in Sources */,
+				76CA2D0D27B3AD910025DE77 /* TISImagesSearchEndpoint.swift in Sources */,
+				76CA2D0627B3AC8C0025DE77 /* HTTPURLResponseMock.swift in Sources */,
+				76CA2D0427B3AC8C0025DE77 /* TSIURLSessionMock.swift in Sources */,
+				76CA2D0527B3AC8C0025DE77 /* SXAPIClientMock.swift in Sources */,
+				76CA2D1227B3AD9C0025DE77 /* TISImageDetailsViewModel.swift in Sources */,
+				76CA2D1327B3AD9C0025DE77 /* TISImageDetailsViewController.swift in Sources */,
+				76CA2D0C27B3AD910025DE77 /* TISImagesSearchApiService.swift in Sources */,
+				76CA2D0927B3AD890025DE77 /* TSIAPIClient.swift in Sources */,
+				76CA2D1527B3ADA20025DE77 /* Extensions.swift in Sources */,
+				76DDC4B527B08785009E1A6D /* TISImagesSearchApiServiceTests.swift in Sources */,
+				76CA2D1127B3AD990025DE77 /* TISSectionHeaderView.swift in Sources */,
+				76CA2D1427B3ADA20025DE77 /* TSIAppContext.swift in Sources */,
+				76CA2D0F27B3AD950025DE77 /* TISImagesSearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,7 +691,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C8ZUZ3TB9W;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -648,7 +716,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C8ZUZ3TB9W;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

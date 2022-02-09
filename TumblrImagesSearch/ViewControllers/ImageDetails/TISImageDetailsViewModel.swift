@@ -36,7 +36,7 @@ class TISImageDetailsViewModel: TISImageDetailsViewModelInterface {
                 promise(.failure(TSIError(code: TSIErrorKeys.UNKNOWN_ERROR.rawValue)))
             }.eraseToAnyPublisher()
         }
-        return service.downloaImageTemp(from: url)
+        return service.downloaImage(from: url)
     }
 
 }

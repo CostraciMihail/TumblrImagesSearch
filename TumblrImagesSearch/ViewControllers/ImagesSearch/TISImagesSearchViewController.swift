@@ -184,7 +184,7 @@ extension TISImagesSearchViewController: UITableViewDelegate {
 
         cell.configure(with: nil)
 
-        self.viewModel.service.downloaImageTemp(from: item.url)
+        self.viewModel.service.downloaImage(from: item.url)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { _ in }, receiveValue: { image in
                 guard let cell = self.tableView.cellForRow(at: indexPath) as? TISImageCell else { return
