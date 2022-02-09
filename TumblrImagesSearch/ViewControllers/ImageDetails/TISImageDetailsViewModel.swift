@@ -13,7 +13,7 @@ import Combine
 /// TISImageDetailsViewModelInterface
 protocol TISImageDetailsViewModelInterface: AnyObject {
     var service: TSITumblrAPIServiceInterface { get set }
-    var item: TSISearchResultModel { get set }
+    var item: ImageItem { get set }
 
     func loadImage() -> AnyPublisher<UIImage, TSIError>
 }
@@ -21,22 +21,16 @@ protocol TISImageDetailsViewModelInterface: AnyObject {
 /// TISImageDetailsViewModel
 class TISImageDetailsViewModel: TISImageDetailsViewModelInterface {
 
-    var item: TSISearchResultModel
+    var item: ImageItem
     var service: TSITumblrAPIServiceInterface
     private var cancelBag = Set<AnyCancellable>()
 
-    init(service: TSITumblrAPIServiceInterface, item: TSISearchResultModel) {
+    init(service: TSITumblrAPIServiceInterface = TSITumblrAPIService(), item: ImageItem) {
         self.service = service
         self.item = item
     }
 
     func loadImage() -> AnyPublisher<UIImage, TSIError> {
-        guard let url = item.photos?.first?.originalSize.url else {
-            return Future { promise in
-                promise(.failure(TSIError(code: TSIErrorKeys.UNKNOWN_ERROR.rawValue)))
-            }.eraseToAnyPublisher()
-        }
-        return service.downloaImage(from: url)
+        return service.downloaImage(from: item.url)
     }
-
 }

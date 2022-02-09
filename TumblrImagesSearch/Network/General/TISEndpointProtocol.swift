@@ -60,7 +60,6 @@ extension EndpointProtocol {
     }
 }
 
-
 extension URLComponents {
 
     init(service: EndpointProtocol) {
@@ -99,5 +98,4 @@ extension URLRequest {
 
         httpBody = try? JSONSerialization.data(withJSONObject: parameters)
     }
-
 }

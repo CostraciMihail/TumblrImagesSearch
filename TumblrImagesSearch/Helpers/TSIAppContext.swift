@@ -10,7 +10,7 @@ import Foundation
 
 final class TSIAppContext {
     // MARK: - Properties
-    //
+    
     static var bundleID: String {
         return Bundle.main.bundleIdentifier ?? ""
     }

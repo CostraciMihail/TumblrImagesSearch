@@ -36,12 +36,18 @@ class TISImagesSearchViewModel {
     }
 
     var items: [ImageItem] {
-        foundImages.compactMap({ item in
-            guard let imageUrl = item.photos?.first?.originalSize.url else {
-                return nil
+        var imageItems = [ImageItem]()
+        foundImages.forEach({ item in
+            guard let photos = item.photos, !photos.isEmpty else { return }
+            photos.forEach { photoModel in
+                if !photoModel.originalSize.url.isEmpty {
+                    let title = item.tags?.first ?? "Image"
+                    imageItems.append(ImageItem(title: title, url: photoModel.originalSize.url))
+                }
             }
-            return ImageItem(title: "1", url: imageUrl)
         })
+
+        return imageItems
     }
 
     func searchImages(withTag tag: String) {

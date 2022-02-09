@@ -44,7 +44,7 @@ class TISImageDetailsViewController: UIViewController {
     // MARK: - UI Setup
 
     func setupUI() {
-        title = viewModel.item.tags?.first ?? "Image Tag"
+        title = viewModel.item.title
         view.backgroundColor = .white
         setupNavigationBar()
         setupImageView()

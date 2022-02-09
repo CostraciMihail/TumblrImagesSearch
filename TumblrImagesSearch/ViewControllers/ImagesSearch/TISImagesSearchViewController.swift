@@ -171,8 +171,8 @@ extension TISImagesSearchViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard indexPath.row <= viewModel.foundImages.count - 1 else { return }
-        openImageDetailsScreen(item: viewModel.foundImages[indexPath.row])
+        guard indexPath.row <= viewModel.items.count - 1 else { return }
+        openImageDetailsScreen(item: viewModel.items[indexPath.row])
     }
 
     func setUpCell(tableView: UITableView, indexPath: IndexPath, item: ImageItem) -> UITableViewCell {
@@ -198,7 +198,7 @@ extension TISImagesSearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: TISSectionHeaderView.identifier) as? TISSectionHeaderView else { return nil }
 
-        header.title.text = "Found \(viewModel.foundImages.count) items"
+        header.title.text = "Found \(viewModel.items.count) items"
         header.title.textColor = .black
         return header
     }
@@ -211,10 +211,10 @@ extension TISImagesSearchViewController: UITableViewDelegate {
 // MARK: - Navigation
 
 extension TISImagesSearchViewController {
-    func openImageDetailsScreen(item: TSISearchResultModel) {
+    func openImageDetailsScreen(item: ImageItem) {
         guard let navVC = navigationController else { return }
 
-        let viewModel = TISImageDetailsViewModel(service: TSITumblrAPIService(), item: item)
+        let viewModel = TISImageDetailsViewModel(item: item)
         let vc = TISImageDetailsViewController(viewModle: viewModel)
 
         DispatchQueue.main.async {

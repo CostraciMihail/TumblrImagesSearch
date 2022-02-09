@@ -53,5 +53,4 @@ struct TSIAPIClient: TSIAPIClientInterface, TSIErrorReponse {
             .eraseToAnyPublisher()
     }
 
-
 }
