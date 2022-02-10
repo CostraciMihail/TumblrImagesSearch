@@ -60,18 +60,8 @@ class TISImagesSearchApiServiceTests: XCTestCase {
                 }
 
                 XCTAssertTrue(containsSearchedTag)
+                XCTAssertEqual(results.response.allImageItems.count, 25)
 
-                var foundedImages = [TSIPhotoModel]()
-                results.response.forEach { model  in
-                    guard let photos = model.photos, !photos.isEmpty else { return }
-                    photos.forEach { photoModel in
-                        if !photoModel.originalSize.url.isEmpty {
-                            foundedImages.append(photoModel)
-                        }
-                    }
-                }
-
-                XCTAssertEqual(foundedImages.count, 25)
             }.store(in: &cancelBag)
     }
 

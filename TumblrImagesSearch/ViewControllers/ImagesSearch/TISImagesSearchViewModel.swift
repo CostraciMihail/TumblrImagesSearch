@@ -36,18 +36,7 @@ class TISImagesSearchViewModel {
     }
 
     var items: [ImageItem] {
-        var imageItems = [ImageItem]()
-        foundImages.forEach({ item in
-            guard let photos = item.photos, !photos.isEmpty else { return }
-            photos.forEach { photoModel in
-                if !photoModel.originalSize.url.isEmpty {
-                    let title = item.tags?.first ?? "Image"
-                    imageItems.append(ImageItem(title: title, url: photoModel.originalSize.url))
-                }
-            }
-        })
-
-        return imageItems
+        foundImages.allImageItems
     }
 
     func searchImages(withTag tag: String) {
@@ -57,17 +46,8 @@ class TISImagesSearchViewModel {
                     debugPrint("Error: \(error)")
                 }
             } receiveValue: { [weak self] results in
-
                 guard let self = self else { return }
-                let images = results.response.compactMap { item -> TSISearchResultModel? in
-                    guard let photos = item.photos, !photos.isEmpty,
-                          photos.contains(where: { $0.originalSize.url != "" }) else {
-                              return nil
-                          }
-                    return item
-                }
-                self.foundImages = images
-
+                self.foundImages = results.response.modelsWithPhotos // images
             }.store(in: &cancelBag)
     }
 

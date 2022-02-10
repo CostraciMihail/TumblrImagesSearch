@@ -18,13 +18,6 @@ struct TSIMetaDTO: Codable {
     let msg: String
 }
 
-struct TSISearchResultModel: Codable {
-    let tags: [String]?
-    let blogName: String?
-    let blog: TSIBlogModel?
-    let photos: [TSIPhotoModel]?
-}
-
 struct TSIBlogModel: Codable {
     let name: String?
     let title: String?

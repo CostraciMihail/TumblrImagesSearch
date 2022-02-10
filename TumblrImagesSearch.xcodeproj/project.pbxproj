@@ -35,6 +35,8 @@
 		76CA2D1A27B3C3220025DE77 /* TISImagesSearchViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA2D1927B3C3220025DE77 /* TISImagesSearchViewModelTest.swift */; };
 		76CA2D1D27B3F3500025DE77 /* TSIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA2D1C27B3F3500025DE77 /* TSIModels.swift */; };
 		76CA2D1E27B3F41C0025DE77 /* TSIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA2D1C27B3F3500025DE77 /* TSIModels.swift */; };
+		76CA2D2027B5050B0025DE77 /* TSISearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA2D1F27B5050B0025DE77 /* TSISearchResultModel.swift */; };
+		76CA2D2227B505710025DE77 /* TSISearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CA2D1F27B5050B0025DE77 /* TSISearchResultModel.swift */; };
 		76DDC49E27B08782009E1A6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC49D27B08782009E1A6D /* AppDelegate.swift */; };
 		76DDC4A027B08782009E1A6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC49F27B08782009E1A6D /* SceneDelegate.swift */; };
 		76DDC4A227B08782009E1A6D /* TISImagesSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDC4A127B08782009E1A6D /* TISImagesSearchViewController.swift */; };
@@ -86,6 +88,7 @@
 		76CA2D1727B3B1C30025DE77 /* Cars-Images.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Cars-Images.json"; sourceTree = "<group>"; };
 		76CA2D1927B3C3220025DE77 /* TISImagesSearchViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TISImagesSearchViewModelTest.swift; sourceTree = "<group>"; };
 		76CA2D1C27B3F3500025DE77 /* TSIModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSIModels.swift; sourceTree = "<group>"; };
+		76CA2D1F27B5050B0025DE77 /* TSISearchResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSISearchResultModel.swift; sourceTree = "<group>"; };
 		76DDC49A27B08782009E1A6D /* TumblrImagesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TumblrImagesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76DDC49D27B08782009E1A6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76DDC49F27B08782009E1A6D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +188,15 @@
 			path = APIClientMocks;
 			sourceTree = "<group>";
 		};
+		76CA2D2127B505450025DE77 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				76CA2D1C27B3F3500025DE77 /* TSIModels.swift */,
+				76CA2D1F27B5050B0025DE77 /* TSISearchResultModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		76DDC49127B08782009E1A6D = {
 			isa = PBXGroup;
 			children = (
@@ -247,7 +259,7 @@
 			children = (
 				769206B327B3620A00274562 /* General */,
 				769206B227B361FB00274562 /* ImagesSearchApi */,
-				76CA2D1C27B3F3500025DE77 /* TSIModels.swift */,
+				76CA2D2127B505450025DE77 /* Models */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -431,6 +443,7 @@
 				76DDC4A227B08782009E1A6D /* TISImagesSearchViewController.swift in Sources */,
 				76DDC49E27B08782009E1A6D /* AppDelegate.swift in Sources */,
 				76DDC4E727B0BEF9009E1A6D /* TISImagesSearchApiService.swift in Sources */,
+				76CA2D2027B5050B0025DE77 /* TSISearchResultModel.swift in Sources */,
 				76DDC4F827B0C757009E1A6D /* TSIHelpers.swift in Sources */,
 				76DDC4EF27B0C0AF009E1A6D /* TSIError.swift in Sources */,
 				76DDC4CE27B096EE009E1A6D /* TISImageDetailsViewController.swift in Sources */,
@@ -461,6 +474,7 @@
 				76CA2D1A27B3C3220025DE77 /* TISImagesSearchViewModelTest.swift in Sources */,
 				76CA2D0727B3AD830025DE77 /* TSIError.swift in Sources */,
 				76CA2D0D27B3AD910025DE77 /* TISImagesSearchEndpoint.swift in Sources */,
+				76CA2D2227B505710025DE77 /* TSISearchResultModel.swift in Sources */,
 				76CA2D0627B3AC8C0025DE77 /* HTTPURLResponseMock.swift in Sources */,
 				76CA2D0427B3AC8C0025DE77 /* TSIURLSessionMock.swift in Sources */,
 				76CA2D0527B3AC8C0025DE77 /* SXAPIClientMock.swift in Sources */,
